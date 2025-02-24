@@ -38,8 +38,10 @@ public class Macska implements Cloneable {
         //my_clone.ehsegSzint = this.ehsegSzint;
         //my_clone.kolykok = (ArrayList<Macska>) this.kolykok.clone();
         //return my_clone;
+        return myClone;
 
     }
+
 
     public Macska() {}
 
