@@ -25,6 +25,18 @@ public class Test1 {
 
     //immutabel: magyarul váltotathatlan, ez egy jó dolog mivel nem kell klonozni
     //Szerencsére egy String immutable, bármit csinálhatsz egy stringgel, nem tudod megváltoztatni
+
+    //melyklonozásnál a Stringet klonozni kellene, hiszen a String referencia, ....
+
+    //c# esetén az objektnek vagy egy proteceted memberwise clone nevű metódusa am psheudo copyt-t csinál
+    // protected == kivülről nem hívható, viszont a gyerekejből annál inkább
+    // ugyanigy jávában az obejkten van egy ilyen metódusa ami szintén shallow copyt csinál
+    // Tehát ah eleg a shallow copy akkor csak meg kell hívni a super.clone()-t.
+
+
+    //Jávában a clone elterjedt, C#-ban pedig CopyConstruktor van elterjedve
+
+
     @Test
     public void macskaklon_test2() {
 

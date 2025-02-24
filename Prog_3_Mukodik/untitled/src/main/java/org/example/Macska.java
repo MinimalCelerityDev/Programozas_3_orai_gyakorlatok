@@ -1,11 +1,14 @@
 package org.example;
 
+import java.util.ArrayList;
+
 public class Macska implements Cloneable {
 
     private String nev;
     private int labakSzama;
     private String szin;
     private double ehsegSzint;
+    private ArrayList<Macska> kolykok;
 
     //klonozasbol kettő darab fajta van, a sekély klonozoas == shallow copy = a ref-kat is sim =-gel másolom
     // a mély klonozás = deep copy = a ref-kat klónozást másolom
@@ -13,12 +16,28 @@ public class Macska implements Cloneable {
     @Override
     public Macska clone()  {
 
-        Macska my_clone = new Macska(nev, labakSzama);
-        my_clone.nev = this.nev;
-        my_clone.labakSzama = this.labakSzama;
-        my_clone.szin = this.szin;
-        my_clone.ehsegSzint = this.ehsegSzint;
-        return my_clone;
+        Macska myClone = null;
+
+        try{
+
+            myClone = (Macska) super.clone();
+
+        }
+        catch (Exception e)
+
+        {
+
+            return myClone;
+
+        }
+
+        //Macska my_clone = new Macska(nev, labakSzama);
+        //my_clone.nev = this.nev;
+        //my_clone.labakSzama = this.labakSzama;
+        //my_clone.szin = this.szin;
+        //my_clone.ehsegSzint = this.ehsegSzint;
+        //my_clone.kolykok = (ArrayList<Macska>) this.kolykok.clone();
+        //return my_clone;
 
     }
 
