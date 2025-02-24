@@ -26,6 +26,13 @@ public class Eger implements Cloneable
         return suly;
     }
 
+    public void setSuly(Double suly) {
+        this.suly = suly;
+    }
+
+    public void setFiue(boolean fiue) {
+        this.fiue = fiue;
+    }
 
     public boolean isFiue() {
         return fiue;
