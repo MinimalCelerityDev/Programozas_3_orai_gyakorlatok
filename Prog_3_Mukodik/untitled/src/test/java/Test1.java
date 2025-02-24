@@ -22,6 +22,9 @@ public class Test1 {
 
     }
 
+
+    //immutabel: magyarul váltotathatlan, ez egy jó dolog mivel nem kell klonozni
+    //Szerencsére egy String immutable, bármit csinálhatsz egy stringgel, nem tudod megváltoztatni
     @Test
     public void macskaklon_test2() {
 
