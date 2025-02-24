@@ -1,4 +1,5 @@
 import org.example.Macska;
+import org.example.Eger;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -48,6 +49,17 @@ public class Test1 {
         Macska m2 = m1; // m1 és m2-is ugyanarra a macskára mutat
         m2.setNev("Kormi");
         Assertions.assertEquals(m1.getNev(), "Kormi");
+    }
+
+    @Test
+    public void egerklon_test1() {
+        double suly = 0.3;
+        boolean fiue = true;
+        Eger e1 = new Eger(suly, fiue);
+        Eger e2 = e1.clone();
+        Assertions.assertEquals(e1.getSuly(), e2.getSuly(), 0.001);
+        Assertions.assertEquals(e1.isFiue(), e2.isFiue());
+        Assertions.assertFalse(e1 == e2);
     }
 
 }
